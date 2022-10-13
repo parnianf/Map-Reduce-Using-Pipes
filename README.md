@@ -2,7 +2,9 @@
 
 The purpose of this project is to learn how to manage processes and the communication between them by implementing a word counter using the Map-Reduce model.
 
-**MapReduce** is a framework for processing parallelizable problems across large datasets using a large number of computers (nodes), collectively referred to as a cluster or a grid.
+**Map-Reduce** consists of two sections: 
+* **Mapping**: In this section, there are a number of mapping processes that operate completely independently of each other and have no connection with each other. The output of this step will be a number of **key-values** that will be sent to the reduction section. The number of processes in the mapping part is not limited. Each of the mapping processes can be executed in parallel.
+* **Reduction**: In this section, the outputs of the previous step are received as input and then the data is divided based on the key. Data that have the same key must be assigned to the same process. Each reduction process performs the desired operation on the data set with the same key and produces the output.
 
 ### System architecture
 In this system, there are three types of processes:
